@@ -10,20 +10,22 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(180deg, #fc8d2c, #f5dc6e, #fc8d2c);   
+   background-color: #3d3d3d;   
 }
 
 .icon{
-    width: 100px;
+    width: 70px;
 }
 
 .card{
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     position: relative;
 
     transform-style: preserve-3d;
     transition: transform .5s;
+
+   
 
 }
 
@@ -37,6 +39,7 @@ body{
     border-radius: 20px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.61);
     backface-visibility: hidden;
+    
 }
 
 .flip{
@@ -46,12 +49,13 @@ body{
 .card_front{
     transform: rotateY(180deg);
     background-color: #183a37;
+    border: 1px #fff solid;
 }
 
 .card_back{
     color: #fff;
     background-color: #04151f;
-    font-size: 40px;
+    font-size: 25px;
     /* display: none; */
 }
 
@@ -65,7 +69,7 @@ body{
     font-size: 25px;
 
 
-    display: none;
+    display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -73,16 +77,33 @@ body{
 
 #restart{
     padding: 20px;
-    font-size: 20px;
-    background-color: yellow;
+    height: 60px;
+    font-size: 10px;
+    background: linear-gradient(45deg, transparent 5%, #fffb24 0);;
     border: none;
-    border-radius: 15px;
-    margin-top: 20px
+    margin-top: 40px;
+    cursor: pointer;
+    letter-spacing: 3px;
+    animation: stylebottom 0.6s; 
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    transition: background 0.5s, color 0.5s;
+    
 }
+
+
+
 
 #gameBoard{
     max-width: 700px;
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr 1fr  / 1fr 1fr 1fr 1fr;
     gap: 20px
+}
+
+@keyframes stylebottom {
+    0% {width: 240px; font-size: 10px;}
+    100% {width: 260px; font-size: 11px}
+   
+
 }
